@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "C:\\msys64\\home\\Nicci\\Source\\programs\\include\\dll-so\\Computer_Info\\CPU_Info.h"
+#include "CPU_Info.h"
 
 typedef int (*get_cpu_data_fn)(CPU_DATA*);
 
@@ -15,7 +15,7 @@ static const char* core_type_to_string(CoreType t) {
 }
 
 int main(void) {
-	HMODULE lib = LoadLibraryA("sos\\CPU-Info.dll");
+	HMODULE lib = LoadLibraryA("CPU-Info.dll");
 	if (!lib) {
 		fprintf(stderr, "Failed to load DLL\n");
 		return 1;
